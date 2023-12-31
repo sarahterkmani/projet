@@ -1,4 +1,5 @@
 Quelles sont les structures de données à utiliser ?
+
 ****Structures pour les arguments des threads (ThreadArgs) :
 ThreadArgs est une structure qui contient les arguments passés aux threads producer et consumer. Ces arguments incluent des informations sur la plage de lignes à traiter, les matrices B, C et A, ainsi que d'autres détails nécessaires pour effectuer les calculs.
 ****Mutex pour les matrices B et C (matrix_B_mutex et matrix_C_mutex) :
@@ -9,6 +10,7 @@ Les sémaphores sont utilisés pour coordonner l'accès au tampon (buffer) entre
 Ces tableaux contiennent les données des matrices B, C et le tampon intermédiaire utilisé pour stocker les résultats partiels.
 
 q2: Comment allez-vous protéger l'accès à ces données?
+
 ****Matrices B et C (mutex) :
 Les matrices B et C sont protégées par des mutex (matrix_B_mutex et matrix_C_mutex) dans la fonction producer. Avant d'accéder à chaque élément de ces matrices, le thread acquiert les verrous correspondants. Une fois les calculs effectués, les verrous sont relâchés.
 ****Tampon (sémaphore) :
