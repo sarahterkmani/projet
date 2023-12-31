@@ -20,6 +20,9 @@ L'accès à la matrice résultante A est également protégé par un sémaphore 
 
 3q quels sont les risques
 ****Le code fourni utilise des mécanismes de synchronisation tels que les mutex et les sémaphores pour éviter les conditions de course et garantir un accès sûr aux données partagées entre les threads pas des resque
+
+
+
 resume
 Le programme en question réalise une multiplication matricielle parallèle à l'aide de threads producteurs et consommateurs. Les matrices B et C sont générées aléatoirement et stockées dans des tableaux. Des threads producteurs calculent les produits partiels et les stockent dans un tampon, tandis que des threads consommateurs copient ces résultats dans la matrice résultante A. La synchronisation est assurée par des mutex pour les matrices B et C, ainsi que des sémaphores pour le tampon et la matrice résultante
 
